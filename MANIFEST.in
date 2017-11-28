@@ -1,0 +1,2 @@
+graft trump_net
+include *.cfg *.rst *.in *.txt

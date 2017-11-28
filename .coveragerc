@@ -1,0 +1,6 @@
+[run]
+source = trump_net
+[report]
+omit =
+    */python?.?/*
+    */site-packages/nose/*
