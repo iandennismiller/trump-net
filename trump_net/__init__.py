@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 # trump-net (c) Ian Dennis Miller
 
+from situation import Resource, Event, Person, Excerpt, Place, Item, Group
+assert Resource and Event and Person and Excerpt and Place and Item and Group
 
-def main(quantity=1):
-    print("hello world!")
-    print("quantity started out as {0}".format(quantity))
-    quantity += 1
-    print("now quantity is {0}".format(quantity))
-    return(quantity)
+
+def main():
+    Person.create(name="Donald Trump")
+    Person.create(name="Donald Trump, Jr.")
+
+    for p in Person.query.all():
+        print(p.dumps())
 
 if __name__ == '__main__':
-    main(1)
+    main()

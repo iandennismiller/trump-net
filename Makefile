@@ -1,7 +1,7 @@
 # trump-net (c) Ian Dennis Miller
 
 SHELL=/bin/bash
-MOD_NAME=situation
+MOD_NAME=trump_net
 TEST_CMD=SETTINGS=$$PWD/etc/testing.conf nosetests -w $(MOD_NAME)
 #  --with-coverage --cover-package=$(MOD_NAME)
 
