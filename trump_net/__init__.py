@@ -5,6 +5,7 @@ from flask_diamond import Diamond
 from flask_diamond.facets.administration import AdminModelView
 from flask_diamond.facets.database import db
 from .models import User, Role
+from situation import Resource, Event, Person, Excerpt, Place, Item, Group
 
 # declare these globalish objects before initializing models
 application = None
