@@ -2,18 +2,17 @@
 # -*- coding: utf-8 -*-
 # trump-net (c) Ian Dennis Miller
 
-import sys
-import traceback
-sys.path.insert(0, '.')
-
-import warnings
-from flask.exthook import ExtDeprecationWarning
-warnings.simplefilter('ignore', ExtDeprecationWarning)
 
 from flask_script import Manager, Shell, Server
 from flask_migrate import Migrate, MigrateCommand, upgrade
 import alembic
 import alembic.config
+import sys
+import warnings
+from flask.exthook import ExtDeprecationWarning
+warnings.simplefilter('ignore', ExtDeprecationWarning)
+
+sys.path.insert(0, '.')
 from trump_net import create_app, db
 from trump_net.models import User, Role
 
@@ -88,6 +87,15 @@ def init_db(migration):
         alembic.command.stamp(cfg, "head")
     Role.add_default_roles()
 
+
+@manager.command
+def spec():
+    "apply situation specification"
+    db.drop_all()
+    db.create_all()
+    db.session.commit()
+    import trump_net.spec.persons
+    assert trump_net
 
 if __name__ == "__main__":
     manager.run()

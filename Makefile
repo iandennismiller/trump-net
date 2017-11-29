@@ -10,6 +10,9 @@ TEST_CMD=SETTINGS=$$PWD/etc/conf/testing.conf $(NOSETESTS_PATH) $(MOD_NAME)
 install:
 	python setup.py install
 
+spec:
+	SETTINGS=$$PWD/etc/conf/dev.conf bin/manage.py spec
+
 requirements:
 	pip install -r requirements.txt
 
@@ -76,4 +79,4 @@ notebook:
 release:
 	python setup.py sdist upload
 
-.PHONY: clean install test server watch notebook db single docs shell upgradedb migratedb release requirements apidocs gh-pages develop
+.PHONY: clean install test server watch notebook db single docs shell upgradedb migratedb release requirements apidocs gh-pages develop spec
