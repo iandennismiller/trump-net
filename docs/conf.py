@@ -18,6 +18,7 @@ import datetime
 from git import Repo
 
 
+# from https://github.com/flask-admin/flask-admin/blob/master/setup.py
 def fpath(name):
     return os.path.join(os.path.dirname(__file__), name)
 

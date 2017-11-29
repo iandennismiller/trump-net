@@ -4,8 +4,8 @@
 import re
 import os
 import codecs
-from setuptools import setup
-from setuptools import find_packages
+from setuptools import setup, find_packages
+from distutils.dir_util import copy_tree
 
 
 def read(*rnames):
@@ -24,6 +24,8 @@ setup(
     description="Model the Trump Situation",
     packages=find_packages(),
     scripts=[
+        "bin/runserver.py",
+        "bin/manage.py",
     ],
     long_description=read('Readme.rst'),
     classifiers=[],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers

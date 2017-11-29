@@ -3,9 +3,7 @@ cache: pip
 python:
   - 2.7
   - 3.5
-install:
-  - make dev install
-script:
-  - nosetests -w trump_net -c etc/tests.cfg --with-coverage --cover-package=trump_net
-after_success:
-  - coveralls --rcfile=.coveragerc
+# command to install dependencies
+install: make install
+# command to run tests
+script: make test
