@@ -4,6 +4,7 @@
 from nose.plugins.attrib import attr
 from .mixins import DiamondTestCase
 import situation
+import situation.io
 
 
 class SpecTestCase(DiamondTestCase):
@@ -23,6 +24,6 @@ class SpecTestCase(DiamondTestCase):
         g = situation.Group.find(name="Trump Clan")
         assert g
 
-        h = situation.dump()
+        h = situation.io.dump()
         self.assertEqual(h["persons"][0]["name"], "Donald Trump", "person name match")
         self.assertEqual(h["events"][0]["name"], "Trump Tower Meeting", "event name match")

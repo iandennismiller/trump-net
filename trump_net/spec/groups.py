@@ -73,3 +73,10 @@ Group.create(name="Cambridge Analytica",
         steve_bannon,
         robert_mercer,
     ])
+
+Group.create(name="Breitbart",
+    members=[
+        steve_bannon,
+        robert_mercer,
+        milo_yiannopoulos,
+    ])

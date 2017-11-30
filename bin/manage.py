@@ -96,9 +96,10 @@ def spec():
     db.create_all()
     db.session.commit()
     from trump_net.spec import init
-    from situation import dump
     init()
-    print(json.dumps(dump(), indent=4, sort_keys=True))
+    import situation.io
+    print(json.dumps(situation.io.dump(), indent=4, sort_keys=True))
+    situation.io.save_events_dot("/tmp/trump.dot")
 
 if __name__ == "__main__":
     manager.run()
