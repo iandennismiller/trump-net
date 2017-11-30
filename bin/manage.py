@@ -8,6 +8,7 @@ from flask_migrate import Migrate, MigrateCommand, upgrade
 import alembic
 import alembic.config
 import sys
+import json
 import warnings
 from flask.exthook import ExtDeprecationWarning
 warnings.simplefilter('ignore', ExtDeprecationWarning)
@@ -94,8 +95,10 @@ def spec():
     db.drop_all()
     db.create_all()
     db.session.commit()
-    import trump_net.spec.persons
-    assert trump_net
+    from trump_net.spec import init
+    from situation import dump
+    init()
+    print(json.dumps(dump(), indent=4, sort_keys=True))
 
 if __name__ == "__main__":
     manager.run()

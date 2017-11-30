@@ -11,12 +11,12 @@ class SpecTestCase(DiamondTestCase):
 
     def setUp(self):
         super(SpecTestCase, self).setUp()
-        import trump_net.spec.persons
-        assert trump_net
+        from trump_net.spec import init
+        init()
+        # assert trump_net
 
     @attr("single")
-    def test_create(self):
-        "ensure an account can be created"
+    def test_spec(self):
         p = situation.Person.find(name="Donald Trump")
         assert p
 
@@ -24,4 +24,5 @@ class SpecTestCase(DiamondTestCase):
         assert g
 
         h = situation.dump()
-        self.assertEqual(h["persons"][0]["name"], "Donald Trump", "name match")
+        self.assertEqual(h["persons"][0]["name"], "Donald Trump", "person name match")
+        self.assertEqual(h["events"][0]["name"], "Trump Tower Meeting", "event name match")

@@ -1,67 +1,26 @@
 # -*- coding: utf-8 -*-
 # trump-net (c) Ian Dennis Miller
 
-# from datetime import datetime
-from situation import Person, Group
+from situation import Person
 
 
-g = Group.create(name="Trump Clan")
-g.members.extend([
-    Person.find_or_create(name="Donald Trump"),
-    Person.find_or_create(name="Donald Trump, Jr."),
-    Person.find_or_create(name="Fred Trump"),
-    Person.find_or_create(name="Fred Trump, Jr."),
-    Person.find_or_create(name="Ivana Trump"),
-    Person.find_or_create(name="Ivanka Trump"),
-    Person.find_or_create(name="Eric Trump"),
-    Person.find_or_create(name="Tiffany Trump"),
-    Person.find_or_create(name="Barron Trump"),
-    Person.find_or_create(name="Marla Maples"),
-    Person.find_or_create(name="Melania Trump"),
-    Person.find_or_create(name="Jared Kushner"),
-])
-
-g = Group.create(name="Kushner Clan")
-g.members.extend([
-    Person.find_or_create(name="Jared Kushner"),
-    Person.find_or_create(name="Ivanka Trump"),
-    Person.find_or_create(name="Charles Kushner"),
-])
-
-g = Group.create(name="Marples Clan")
-g.members.extend([
-    Person.find_or_create(name="Donald Trump"),
-    Person.find_or_create(name="Marla Maples"),
-    Person.find_or_create(name="Tiffany Trump"),
-])
-
-g = Group.create(name="Knavs Clan")
-g.members.extend([
-    Person.find_or_create(name="Donald Trump"),
-    Person.find_or_create(name="Melania Trump"),
-    Person.find_or_create(name="Barron Trump"),
-])
-
-g = Group.create(name="Zelníčková Clan")
-g.members.extend([
-    Person.find_or_create(name="Donald Trump"),
-    Person.find_or_create(name="Ivana Trump"),
-    Person.find_or_create(name="Ivanka Trump"),
-    Person.find_or_create(name="Donald Trump, Jr."),
-    Person.find_or_create(name="Eric Trump"),
-])
-
-g = Group.create(name="Trump Campaign")
-g.members.extend([
-    Person.find_or_create(name="Donald Trump"),
-    Person.find_or_create(name="Jared Kushner"),
-    Person.find_or_create(name="Paul Manafort"),
-    Person.find_or_create(name="Steve Bannon"),
-])
-
-g = Group.create(name="Trump Administration")
-g.members.extend([
-    Person.find_or_create(name="Donald Trump"),
-    Person.find_or_create(name="Jared Kushner"),
-    Person.find_or_create(name="Steve Bannon"),
-])
+donald_trump = Person.create(name="Donald Trump")
+donald_trump_jr = Person.create(name="Donald Trump, Jr.")
+fred_trump = Person.create(name="Fred Trump")
+fred_trump_jr = Person.create(name="Fred Trump, Jr.")
+ivana_trump = Person.create(name="Ivana Trump")
+ivanka_trump = Person.create(name="Ivanka Trump")
+eric_trump = Person.create(name="Eric Trump")
+tiffany_trump = Person.create(name="Tiffany Trump")
+barron_trump = Person.create(name="Barron Trump")
+marla_maples = Person.create(name="Marla Maples")
+melania_trump = Person.create(name="Melania Trump")
+jared_kushner = Person.create(name="Jared Kushner")
+charles_kushner = Person.create(name="Charles Kushner")
+paul_manafort = Person.create(name="Paul Manafort")
+steve_bannon = Person.create(name="Steve Bannon")
+roger_stone = Person.create(name="Roger Stone")
+kelly_anne_conway = Person.create(name="Kelly Anne Conway")
+robert_mercer = Person.create(name="Robert Mercer")
+rebekah_mercer = Person.create(name="Rebekah Mercer")
+natalia_veselnetskaya = Person.create(name="Natalia Veselnetskaya")
