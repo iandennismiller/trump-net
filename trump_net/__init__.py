@@ -23,6 +23,7 @@ class trump_net(Diamond):
         admin = self.super("administration", user=User, role=Role)
 
         model_list = [
+            Resource, Event, Person, Excerpt, Place, Item, Group
         ]
 
         for model in model_list:

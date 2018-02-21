@@ -101,5 +101,6 @@ def spec():
     print(json.dumps(situation.io.dump(), indent=4, sort_keys=True))
     situation.io.save_events_dot("/tmp/trump.dot")
 
+
 if __name__ == "__main__":
     manager.run()

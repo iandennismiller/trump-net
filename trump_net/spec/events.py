@@ -30,3 +30,12 @@ Event.create(name="Sale of Palm Beach Mansion",
         donald_trump,
         dmitry_rybolovlev,
     ])
+
+Event.create(name="Chaika Rohrbacher Meeting",
+    place=moscow,
+    actors=[
+        yuri_chaika,
+        dana_rohrbacher,
+        natalia_veselnetskaya,
+    ])
+

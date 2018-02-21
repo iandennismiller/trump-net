@@ -27,3 +27,5 @@ mar_a_lago = Place.create(name="Mar a Lago",
     owners=[
         donald_trump,
     ])
+
+moscow = Place.create(name="Moscow")
